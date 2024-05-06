@@ -1,0 +1,11 @@
+{
+  "name": "pancake-x-contracts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:pancakeswap/pancake-x-contracts.git",
+  "author": "rabbid <rabbid@pancakeswap.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.8.0"
+  }
+}
