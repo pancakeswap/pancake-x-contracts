@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import {Script} from "forge-std/Script.sol";
 
 contract DeployPermit2 is Script {
-    address constant PERMIT2_ADDRESS = 0x000000000022D473030F116dDEE9F6B43aC78BA3;
+    address constant PERMIT2_ADDRESS = 0x31c2F6fcFf4F8759b3Bd5Bf0e1084A055615c768;
 
     function deployPermit2() internal returns (address) {
         bytes memory bytecode =
