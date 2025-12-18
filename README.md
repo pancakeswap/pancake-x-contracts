@@ -13,6 +13,14 @@ Foundry consists of:
 
 https://book.getfoundry.sh/
 
+## Deployment Addresses
+
+| Chain | ExclusiveDutchOrderReactor | Permit2 |
+|-------|---------------------------|---------|
+| BNB Chain | `0xDB9D365b50E62fce747A90515D2bd1254A16EbB9` | `0x31c2F6fcFf4F8759b3Bd5Bf0e1084A055615c768` |
+| Arbitrum | `0x35db01D1425685789dCc9228d47C7A5C049388d8` | `0x31c2F6fcFf4F8759b3Bd5Bf0e1084A055615c768` |
+| Ethereum | `0x35db01D1425685789dCc9228d47C7A5C049388d8` | `0x31c2F6fcFf4F8759b3Bd5Bf0e1084A055615c768` |
+
 ## Usage
 
 ### Build
