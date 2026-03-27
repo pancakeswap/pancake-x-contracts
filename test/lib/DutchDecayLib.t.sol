@@ -4,7 +4,20 @@ pragma solidity ^0.8.0;
 import {Test} from "forge-std/Test.sol";
 import {DutchDecayLib} from "../../src/lib/DutchDecayLib.sol";
 
+/// @dev External call target so vm.expectRevert sees a revert at a lower depth than the cheatcode
+/// (internal library calls are inlined into the test contract and break expectRevert).
+contract DutchDecayLibHarness {
+    function decay(uint256 startAmount, uint256 endAmount, uint256 decayStartTime, uint256 decayEndTime)
+        external
+        view
+        returns (uint256)
+    {
+        return DutchDecayLib.decay(startAmount, endAmount, decayStartTime, decayEndTime);
+    }
+}
+
 contract DutchDecayLibTest is Test {
+    DutchDecayLibHarness internal harness = new DutchDecayLibHarness();
     function testDutchDecayNoDecay(uint256 amount, uint256 decayStartTime, uint256 decayEndTime) public {
         vm.assume(decayEndTime >= decayStartTime);
         assertEq(DutchDecayLib.decay(amount, amount, decayStartTime, decayEndTime), amount);
@@ -105,6 +118,6 @@ contract DutchDecayLibTest is Test {
     ) public {
         vm.assume(decayEndTime < decayStartTime);
         vm.expectRevert(DutchDecayLib.EndTimeBeforeStartTime.selector);
-        DutchDecayLib.decay(startAmount, endAmount, decayStartTime, decayEndTime);
+        harness.decay(startAmount, endAmount, decayStartTime, decayEndTime);
     }
 }

@@ -25,7 +25,7 @@ contract SwapRouter02IntegrationTest is Test, PermitSignature {
     ERC20 constant USDT = ERC20(0xdAC17F958D2ee523a2206206994597C13D831ec7);
     ISwapRouter02 constant SWAPROUTER02 = ISwapRouter02(0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45);
     address constant WHALE = 0xF04a5cC80B1E94C69B48f5ee68a08CD2F09A7c3E;
-    IPermit2 constant PERMIT2 = IPermit2(0x000000000022D473030F116dDEE9F6B43aC78BA3);
+    IPermit2 constant PERMIT2 = IPermit2(0x31c2F6fcFf4F8759b3Bd5Bf0e1084A055615c768);
     uint256 constant ONE = 1000000000000000000;
 
     address swapper;
