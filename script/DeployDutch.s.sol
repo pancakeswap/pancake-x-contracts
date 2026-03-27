@@ -16,7 +16,7 @@ import {MockERC20} from "../test/util/mock/MockERC20.sol";
     }
 
 contract DeployDutch is Script, DeployPermit2 {
-    IPermit2 constant PERMIT2 = IPermit2(0x000000000022D473030F116dDEE9F6B43aC78BA3);
+    IPermit2 constant PERMIT2 = IPermit2(0x31c2F6fcFf4F8759b3Bd5Bf0e1084A055615c768);
     address constant UNI_TIMELOCK = 0x1a9C8182C09F50C8318d769245beA52c32BE35BC;
 
     function setUp() public {}
